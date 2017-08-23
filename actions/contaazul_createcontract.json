@@ -1,0 +1,244 @@
+{
+	"name": {
+    "pt_BR": "Criar um novo contrato", 
+    "en": "Create a new contract"
+  },
+  "action_key": "create_contract",
+  "description": {
+  	"pt_BR": "Criar um novo contrato",
+    "en": "Create a new contract"
+  },
+  "action_fields": {
+    "fields": [
+        {
+            "key": "contract.emission",
+            "name": { "pt_BR": "data de emissão", "en": "emission date" },
+            "description": {"pt_BR": "A data de emissão do contrato","en": "The emission date of the contract"},
+            "required": true,
+            "visible": true,
+            "advanced": false,
+            "field_type": "custom",
+            "data_type": "datetime"
+        },
+        {
+            "key": "contract.payment.type",
+            "name": { "pt_BR": "tipo de pagamento", "en": "payment type" },
+            "description": {"pt_BR": "O tipo de pagamento do contrato","en": "The contract payment type"},
+            "required": true,
+            "visible": true,
+            "advanced": false,
+            "field_type": "dropdown",
+            "data_type": "string",
+            "list" : {
+                "type": "local",
+                "data": [
+                    {"label": "À vista", "value": "CASH"},
+                    {"label": "Parcelado", "value": "TIMES"}
+                ]
+            }
+        },
+        {
+            "key" : "contract.due_day",
+            "name": { "pt_BR": "data de vencimento do contrato", "en": "due day of the contract" },
+            "description": {"pt_BR": "A data de vencimento do contrato","en": "The contract's due day"},
+            "required": true,
+            "visible": true,
+            "advanced": false,
+            "field_type": "integer",
+            "data_type": "integer"
+        },
+        {
+            "key": "contract.duration",
+            "name": { "pt_BR": "duração do contrato", "en": "duration of the contract" },
+            "description": {"pt_BR": "A duração do contrato em meses","en": "The duration of the contract in months"},
+            "required": true,
+            "visible": true,
+            "advanced": false,
+            "field_type": "integer",
+            "data_type": "integer"
+        },
+        {
+            "key": "contract.status",
+            "name": { "pt_BR": "status", "en": "status" },
+            "description": {"pt_BR": "O status do contrato","en": "The contract status"},
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "dropdown",
+            "data_type": "string",
+            "list" : {
+                "type": "local",
+                "data": [
+                    {"label": "Venda pendente", "value": "PENDING"},
+                    {"label": "Venda", "value": "COMMITED"},
+                    {"label": "Cancelado", "value": "CANCELED"}
+                ]
+            }
+        },
+        {
+            "key": "contract.negotiator.id",
+            "name": { "pt_BR": "id do negociador", "en": "negotiatior id" },
+            "description": {"pt_BR": "O id cliente do contrato","en": "The customer id related to the contract"},
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "string",
+            "data_type": "string"
+           
+        },
+        {
+            "key": "contract.products.product.id",
+            "name": { "pt_BR": "id do produto do contrato", "en": "contract product id" },
+            "description": {"pt_BR": "O id de um produto usado como item do contrato","en": "The id of a product used as item in the contract"},
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "string",
+            "data_type": "string"
+        },
+        {
+            "key": "contract.products.quantity",
+            "name": { "pt_BR": "quantidade de produtos do contrato", "en": "contract product quantity" },
+            "description": {"pt_BR": "A quantidade de um produto usado como item do contrato","en": "The quantity of a product used as item in the contract"},
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "integer",
+            "data_type": "integer"
+        },
+        {
+            "key": "contract.products.description",
+            "name": { "pt_BR": "descrição de produtos do contrato", "en": "contract product description" },
+            "description": {"pt_BR": "A descrição de um produto usado como item do contrato","en": "The description of a product used as item in the contract"},
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "string",
+            "data_type": "string",
+            "max" : 100
+        },
+        {
+            "key": "contract.services.service.id",
+            "name": { "pt_BR": "id do serviço do contrato", "en": "contract service id" },
+            "description": {"pt_BR": "O id de um serviço usado como item do contrato","en": "The id of a service used as item in the contract"},
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "string",
+            "data_type": "string"
+        },
+        {
+            "key": "contract.services.quantity",
+            "name": { "pt_BR": "quantidade de serviço do contrato", "en": "contract service quantity" },
+            "description": {"pt_BR": "A quantidade de um serviço usado como item do contrato","en": "The quantity of a service used as item in the contract"},
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "integer",
+            "data_type": "integer"
+        },
+        {
+            "key": "contract.services.description",
+            "name": { "pt_BR": "descrição de serviços do contrato", "en": "contract service description" },
+            "description": {"pt_BR": "A descrição de um serviço usado como item do contrato","en": "The description of a service used as item in the contract"},
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "string",
+            "data_type": "string",
+            "max" : 100
+        },
+        {
+            "key": "contract.product_discount.measure_unit",
+            "name": { "pt_BR": "unidade de medida do desconto de produto", "en": "product discount measure unit" },
+            "description": {"pt_BR": "A unidade de medida dos descontos de produto","en": "The measure unit of the product's discount"},
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "dropdown",
+            "data_type": "string",
+            "list": {
+                "type": "local",
+                "data": [
+                    {"label": "Porcentagem", "value": "PERCENT"},
+                    {"label": "Valor", "value": "VALUE"}
+                ]
+            }
+        },
+        {
+            "key": "contract.product_discount.rate",
+            "name": { "pt_BR": "taxa de desconto de produto", "en": "product discount rate" },
+            "description": {"pt_BR": "A taxa do desconto de produtos","en": "The rate of the product's discount"},
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "integer",
+            "data_type": "decimal"
+        },
+        {
+            "key": "contract.service_discount.measure_unit",
+            "name": { "pt_BR": "unidade de medida do desconto de serviço", "en": "service discount measure unit" },
+            "description": {"pt_BR": "A unidade de medida dos descontos de serviço","en": "The measure unit of the service's discount"},
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "dropdown",
+            "data_type": "string",
+            "list": {
+                "type": "local",
+                "data": [
+                    {"label": "Porcentagem", "value": "PERCENT"},
+                    {"label": "Valor", "value": "VALUE"}
+                ]
+            }
+        },
+        {
+            "key": "contract.service_discount.rate",
+            "name": { "pt_BR": "taxa de desconto de serviço", "en": "service discount rate" },
+            "description": {"pt_BR": "A taxa do desconto de serviços","en": "The rate of the service's discount"},
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "integer",
+            "data_type": "decimal"
+        }
+    ]
+  },
+    "request": {
+        "method_name": "/contracts",
+        "json_api": true,
+        "error_fields" : ["message"],
+        "pre_hooks":{
+            "hooks": [{
+                "name": "Get Customer by Id",
+                "request": {
+                    "verb": "get",
+                    "method_name": "/customers",
+                    "json_api": true,
+                    "params": [{"field": "id", "value": "{customer.id}", "type" : "string"}],
+                    "append_fields": [{"field": "contract.negotiator.id","value": "{customer.id}","type": "string"}]
+                }
+            },
+            {
+                "name" : "Get Product by Id",
+                "request": {
+                    "verb" : "get",
+                    "method_name": "/products",
+                    "json_api": true,
+                    "params": [{"field": "id", "value": "{product.id}", "type" : "string"}],
+                    "append_fields": [{"field": "contract.products.product.id", "value":"{product.id}", "type":"string"}]
+                }
+            },
+            {
+                "name" : "Get Service by Id",
+                "request": {
+                    "verb" : "get",
+                    "method_name": "/services",
+                    "json_api": true,
+                    "params": [{"field": "id", "value": "{service.id}", "type" : "string"}],
+                    "append_fields": [{"field": "contract.services.service.id", "value":"{service.id}", "type":"string"}]
+                }
+            }]
+        }
+    }
+}
