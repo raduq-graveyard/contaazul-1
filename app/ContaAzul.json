@@ -3,8 +3,8 @@
     "app_id": "conta_azul",
     "color": "#2687E9",
     "description": {
-      "pt_BR":"ContaAzul é um sistema de gestão online feito para organizar sua empresa e dar mais tempo para você.", 
-      "en": "ContaAzul is an online management system designed to organize your business and give you more time."
+      "pt_BR":"ContaAzul é a plataforma online fácil de usar que organiza tudo que sua pequena empresa precisa. Em um só lugar, conectada ao banco e à contabilidade.", 
+      "en": "ContaAzul is an easy online platform to organize everything your small business needs. In a single solution, it connects you company to the accountancy and the bank."
     },
     "website": "https://contaazul.com",
     "signup_url": "https://cadastro.contaazul.com/experimente/email",
