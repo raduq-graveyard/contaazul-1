@@ -1,0 +1,51 @@
+{
+	"name": {
+    "pt_BR": "Criar um novo serviço", 
+    "en": "Create a new service"
+  },
+  "action_key": "create_service",
+  "description": {
+  	"pt_BR": "Criar um novo serviço",
+    "en": "Create a new service"
+  },
+  "action_fields": {
+    "fields": [
+        {
+            "key": "service.name",
+            "name": { "pt_BR": "nome", "en": "name" },
+            "description": {"pt_BR": "O nome do serviço","en": "The name of the service"},
+            "required": true,
+            "visible": true,
+            "advanced": false,
+            "field_type": "string",
+            "data_type": "string",
+            "max": 100
+        },
+        {
+            "key": "service.value",
+            "name": { "pt_BR": "valor", "en": "value" },
+            "description": {"pt_BR": "O valor de venda do serviço","en": "The sell value of the service"},
+            "required": true,
+            "visible": true,
+            "advanced": false,
+            "field_type": "integer",
+            "data_type": "decimal"
+        },
+        {
+            "key": "service.cost",
+            "name": { "pt_BR": "custo", "en": "cost" },
+            "description": {"pt_BR": "O valor de custo do serviço","en": "The cost value of the service"},
+            "required": true,
+            "visible": true,
+            "advanced": false,
+            "field_type": "integer",
+            "data_type": "decimal"
+        }
+    ]
+  },
+  "request": {
+    "method_name": "/services",
+    "json_api": true,
+    "error_fields" : ["message"]
+  }
+}
