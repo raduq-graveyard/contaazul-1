@@ -1,0 +1,255 @@
+{
+	"name": {
+    "pt_BR": "Criar uma nova venda", 
+    "en": "Create a new sale"
+  },
+  "action_key": "create_sale",
+  "description": {
+  	"pt_BR": "Criar uma nova venda",
+    "en": "Create a new sale"
+  },
+  "action_fields": {
+    "fields": [
+        {
+            "key": "sale.emission",
+            "name": { "pt_BR": "data de emissão", "en": "emission date" },
+            "description": {"pt_BR": "A data de emissão da venda","en": "The emission date of the sale"},
+            "required": true,
+            "visible": true,
+            "advanced": false,
+            "field_type": "custom",
+            "data_type": "datetime"
+        },
+        {
+            "key": "sale.payment.type",
+            "name": { "pt_BR": "tipo de pagamento", "en": "payment type" },
+            "description": {"pt_BR": "O tipo de pagamento da venda","en": "The sale payment type"},
+            "required": true,
+            "visible": true,
+            "advanced": false,
+            "field_type": "dropdown",
+            "data_type": "string",
+            "list" : {
+                "type": "local",
+                "data": [
+                    {"label": "À vista", "value": "CASH"},
+                    {"label": "Parcelado", "value": "TIMES"}
+                ]
+            }
+        },
+        {
+            "key": "sale.payment.installments.number",
+            "name": { "pt_BR": "numero da parcela", "en": "installment number" },
+            "description": {"pt_BR": "O numero de uma parcela da venda","en": "The number of a sale installment"},
+            "required": true,
+            "visible": true,
+            "advanced": false,
+            "field_type": "integer",
+            "data_type": "integer"
+        },
+        {
+            "key": "sale.payment.installments.value",
+            "name": { "pt_BR": "valor da parcela", "en": "installment value" },
+            "description": {"pt_BR": "O valor de uma parcela da venda","en": "The value of a sale installment"},
+            "required": true,
+            "visible": true,
+            "advanced": false,
+            "field_type": "integer",
+            "data_type": "decimal"
+        },
+        {
+            "key": "sale.payment.installments.due_date",
+            "name": { "pt_BR": "data de vencimento da parcela", "en": "installment due date" },
+            "description": {"pt_BR": "A data de vencimento de uma parcela da venda","en": "The due date of a sale installment"},
+            "required": true,
+            "visible": true,
+            "advanced": false,
+            "field_type": "custom",
+            "data_type": "datetime"
+        },
+        {
+            "key": "sale.status",
+            "name": { "pt_BR": "status", "en": "status" },
+            "description": {"pt_BR": "O status da venda","en": "The sale status"},
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "dropdown",
+            "data_type": "string",
+            "list" : {
+                "type": "local",
+                "data": [
+                    {"label": "Venda pendente", "value": "PENDING"},
+                    {"label": "Venda", "value": "COMMITED"},
+                    {"label": "Cancelado", "value": "CANCELED"}
+                ]
+            }
+        },
+        {
+            "key": "sale.negotiator.id",
+            "name": { "pt_BR": "id do negociador", "en": "negotiatior id" },
+            "description": {"pt_BR": "O id cliente da venda","en": "The customer id related to the sale"},
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "string",
+            "data_type": "string"
+           
+        },
+        {
+            "key": "sale.products.product.id",
+            "name": { "pt_BR": "id do produto da venda", "en": "sale product id" },
+            "description": {"pt_BR": "O id de um produto usado como item da venda","en": "The id of a product used as item in the sale"},
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "string",
+            "data_type": "string"
+        },
+        {
+            "key": "sale.products.quantity",
+            "name": { "pt_BR": "quantidade de produtos da venda", "en": "sale product quantity" },
+            "description": {"pt_BR": "A quantidade de um produto usado como item da venda","en": "The quantity of a product used as item in the sale"},
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "integer",
+            "data_type": "integer"
+        },
+        {
+            "key": "sale.products.description",
+            "name": { "pt_BR": "descrição de produtos da venda", "en": "sale product description" },
+            "description": {"pt_BR": "A descrição de um produto usado como item da venda","en": "The description of a product used as item in the sale"},
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "string",
+            "data_type": "string",
+            "max" : 100
+        },
+        {
+            "key": "sale.services.service.id",
+            "name": { "pt_BR": "id do serviço da venda", "en": "sale service id" },
+            "description": {"pt_BR": "O id de um serviço usado como item da venda","en": "The id of a service used as item in the sale"},
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "string",
+            "data_type": "string"
+        },
+        {
+            "key": "sale.services.quantity",
+            "name": { "pt_BR": "quantidade de serviço da venda", "en": "sale service quantity" },
+            "description": {"pt_BR": "A quantidade de um serviço usado como item da venda","en": "The quantity of a service used as item in the sale"},
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "integer",
+            "data_type": "integer"
+        },
+        {
+            "key": "sale.services.description",
+            "name": { "pt_BR": "descrição de serviços da venda", "en": "sale service description" },
+            "description": {"pt_BR": "A descrição de um serviço usado como item da venda","en": "The description of a service used as item in the sale"},
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "string",
+            "data_type": "string",
+            "max" : 100
+        },
+        {
+            "key": "sale.product_discount.measure_unit",
+            "name": { "pt_BR": "unidade de medida do desconto de produto", "en": "product discount measure unit" },
+            "description": {"pt_BR": "A unidade de medida dos descontos de produto","en": "The measure unit of the product's discount"},
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "dropdown",
+            "data_type": "string",
+            "list": {
+                "type": "local",
+                "data": [
+                    {"label": "Porcentagem", "value": "PERCENT"},
+                    {"label": "Valor", "value": "VALUE"}
+                ]
+            }
+        },
+        {
+            "key": "sale.product_discount.rate",
+            "name": { "pt_BR": "taxa de desconto de produto", "en": "product discount rate" },
+            "description": {"pt_BR": "A taxa do desconto de produtos","en": "The rate of the product's discount"},
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "integer",
+            "data_type": "decimal"
+        },
+        {
+            "key": "sale.service_discount.measure_unit",
+            "name": { "pt_BR": "unidade de medida do desconto de serviço", "en": "service discount measure unit" },
+            "description": {"pt_BR": "A unidade de medida dos descontos de serviço","en": "The measure unit of the service's discount"},
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "dropdown",
+            "data_type": "string",
+            "list": {
+                "type": "local",
+                "data": [
+                    {"label": "Porcentagem", "value": "PERCENT"},
+                    {"label": "Valor", "value": "VALUE"}
+                ]
+            }
+        },
+        {
+            "key": "sale.service_discount.rate",
+            "name": { "pt_BR": "taxa de desconto de serviço", "en": "service discount rate" },
+            "description": {"pt_BR": "A taxa do desconto de serviços","en": "The rate of the service's discount"},
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "integer",
+            "data_type": "decimal"
+        }
+        
+    ]
+  },
+    "request": {
+        "method_name": "/sales",
+        "json_api": true,
+        "error_fields" : ["message"],
+        "pre_hooks":{
+            "hooks": [{
+                "name": "Get Customer by Id",
+                "request": {
+                    "verb": "get",
+                    "method_name": "/customers",
+                    "json_api": true,
+                    "params": [{"field": "id", "value": "{customer.id}", "type" : "string"}],
+                    "append_fields": [{"field": "sale.negotiator.id","value": "{customer.id}","type": "string"}]
+                }
+            },
+            {
+                "name" : "Get Product by Id",
+                "request": {
+                    "verb" : "get",
+                    "method_name": "/products",
+                    "json_api": true,
+                    "params": [{"field": "id", "value": "{product.id}", "type" : "string"}],
+                    "append_fields": [{"field": "sale.products.product.id", "value":"{product.id}", "type":"string"}]
+                }
+            },
+            {
+                "name" : "Get Service by Id",
+                "request": {
+                    "verb" : "get",
+                    "method_name": "/services",
+                    "json_api": true,
+                    "params": [{"field": "id", "value": "{service.id}", "type" : "string"}],
+                    "append_fields": [{"field": "sale.services.service.id", "value":"{service.id}", "type":"string"}]
+                }
+            }]
+        }
+    }
+}
