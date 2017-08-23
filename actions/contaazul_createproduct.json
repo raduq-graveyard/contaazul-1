@@ -1,0 +1,83 @@
+{
+	"name": {
+    "pt_BR": "Criar um novo produto", 
+    "en": "Create a new product"
+  },
+  "action_key": "create_product",
+  "description": {
+  	"pt_BR": "Criar um novo produto",
+    "en": "Create a new product"
+  },
+  "action_fields": {
+    "fields": [
+        {
+            "key": "product.name",
+            "name": { "pt_BR": "nome", "en": "name" },
+            "description": {"pt_BR": "O nome do produto","en": "The name of the product"},
+            "required": true,
+            "visible": true,
+            "advanced": false,
+            "field_type": "string",
+            "data_type": "string",
+            "max": 100
+        },
+        {
+            "key": "product.value",
+            "name": { "pt_BR": "valor", "en": "value" },
+            "description": {"pt_BR": "O valor de venda do produto","en": "The sell value of the product"},
+            "required": true,
+            "visible": true,
+            "advanced": false,
+            "field_type": "integer",
+            "data_type": "decimal"
+        },
+        {
+            "key": "product.cost",
+            "name": { "pt_BR": "custo", "en": "cost" },
+            "description": {"pt_BR": "O valor de custo do produto","en": "The cost value of the product"},
+            "required": true,
+            "visible": true,
+            "advanced": false,
+            "field_type": "integer",
+            "data_type": "decimal"
+        },
+        {
+            "key": "product.code",
+            "name": { "pt_BR": "codigo", "en": "code" },
+            "description": {"pt_BR": "O codigo personalizado do produto","en": "The customized code of the product"},
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "string",
+            "data_type": "string",
+            "max": 20
+        },
+        {
+            "key": "product.barcode",
+            "name": { "pt_BR": "codigo de barras", "en": "barcode" },
+            "description": {"pt_BR": "O codigo de barras do produto","en": "The barcode of the product"},
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "string",
+            "data_type": "string",
+            "max": 20
+        },
+        {
+            "key": "product.available_stock",
+            "name": { "pt_BR": "quantidade disponível em estoque", "en": "amount available in stock" },
+            "description": {"pt_BR": "A quantidade disponível em estoque do produto","en": "The quantity of available products in stock"},
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "integer",
+            "data_type": "decimal"
+        }
+    ]
+  },
+  "request": {
+    "method_name": "/products",
+    "json_api": true,
+    "error_fields" : ["message"]
+  }
+}
