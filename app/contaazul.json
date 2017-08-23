@@ -1,0 +1,28 @@
+{
+    "name": "ContaAzul",
+    "app_id": "conta_azul",
+    "color": "#2687E9",
+    "description": {
+      "pt_BR":"ContaAzul é a plataforma online fácil de usar que organiza tudo que sua pequena empresa precisa. Em um só lugar, conectada ao banco e à contabilidade.", 
+      "en": "ContaAzul is an easy online platform to organize everything your small business needs. In a single solution, it connects you company to the accountancy and the bank."
+    },
+    "website": "https://contaazul.com",
+    "signup_url": "https://cadastro.contaazul.com/experimente/email",
+    "api_base_uri": {
+      "production": {"uri": "https://app.contaazul.com/api/v1", "label": "Produção", "default": true}
+    },
+    "authentication": {
+      "type": "oauth_2", 
+      "oauth_access_fields": {
+        "client_id": "client_id_para_a_pluga",
+        "client_secret": "client_secret_para_a_pluga",
+        "authorize_url": "https://api.contaazul.com/auth/authorize",
+        "access_token_url": "http://api.contaazul.com/oauth2/token",
+        "refresh_token_url": "http://api.contaazul.com/oauth2/token",
+        "redirect_uri": "https://manage.pluga.co/oauth2/conta_azul",
+        "access_token_placement": "header_bearer",
+        "scope": [],
+        "response_type": "code"
+      }
+    }
+  }
