@@ -1,0 +1,223 @@
+{
+	"name": {
+    "pt_BR": "Criar um novo cliente", 
+    "en": "Create a new customer"
+  },
+  "action_key": "create_customer",
+  "description": {
+  	"pt_BR": "Criar um novo cliente",
+    "en": "Create a new customer"
+  },
+  "action_fields": {
+    "fields": [
+        {
+            "key": "customer.name",
+            "name": { "pt_BR": "nome", "en": "name" },
+            "description": {"pt_BR": "O nome do cliente","en": "The name of the customer"},
+            "required": true,
+            "visible": true,
+            "advanced": false,
+            "field_type": "string",
+            "data_type": "string",
+            "max": 200
+        },
+        {
+            "key" : "customer.person_type",
+            "name": { "pt_BR": "tipo de pessoa", "en": "person type" },
+            "description": {"pt_BR": "O tipo de pessoa do cliente","en": "The type of the customer"},
+            "required": true,
+            "visible": true,
+            "advanced": false,
+            "field_type": "dropdown",
+            "data_type": "string",
+            "list": {
+                "type" : "local",
+                "data": [
+                    {"label": "Pessoa física", "value": "NATURAL"},
+                    {"label": "Pessoa jurídica", "value": "LEGAL"}
+                ]
+            }
+        },
+        {
+            "key": "customer.company_name",
+            "name": { "pt_BR": "razão social", "en": "company name" },
+            "description": {
+                "pt_BR": "A razão social do cliente quando o seu tipo é Pessoa Jurídica",
+                "en": "The company name of the customer when the type of the customer is LEGAL"
+            },
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "string",
+            "data_type": "string",
+            "max": 200
+        },
+        {
+            "key": "customer.email",
+            "name": { "pt_BR": "email", "en": "email" },
+            "description": {
+                "pt_BR": "O email do cliente",
+                "en": "The email of the customer"
+            },
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "string",
+            "data_type": "string",
+            "max": 100
+        },
+        {
+            "key": "customer.business_phone",
+            "name": { "pt_BR": "telefone comercial", "en": "business phone" },
+            "description": {
+                "pt_BR": "O telefone comercial do cliente",
+                "en": "The business phone of the customer"
+            },
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "string",
+            "data_type": "string",
+            "max": 50
+        },
+        {
+            "key": "customer.mobile_phone",
+            "name": { "pt_BR": "telefone celular", "en": "mobile phone" },
+            "description": {
+                "pt_BR": "O telefone celular do cliente",
+                "en": "The mobile phone of the customer"
+            },
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "string",
+            "data_type": "string",
+            "max": 20
+        },
+        {
+            "key": "customer.document",
+            "name": { "pt_BR": "documento", "en": "document" },
+            "description": {
+                "pt_BR": "O numero de documento do cliente - pode ser cpf ou cnpj",
+                "en": "The document number of the customer - can be cpf or cnpj"
+            },
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "string",
+            "data_type": "string",
+            "max": 50
+        },
+        {
+            "key": "customer.state_registration_number",
+            "name": { "pt_BR": "inscrição estadual", "en": "state registration number" },
+            "description": {
+                "pt_BR": "O numero de inscrição estadual do cliente",
+                "en": "The state registration number number of the customer"
+            },
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "string",
+            "data_type": "string",
+            "max": 20
+        },
+        {
+            "key": "customer.state_registration_type",
+            "name": { "pt_BR": "indicador de inscrição estadual", "en": "state registration type" },
+            "description": {
+                "pt_BR": "O tipo de indicador de inscrição estadual do cliente",
+                "en": "The state registration type of the customer"
+            },
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "dropdown",
+            "data_type": "string",
+            "list": {
+                "type" : "local",
+                "data": [
+                    {"label": "Não contribuinte", "value": "NO_CONTRIBUTOR"},
+                    {"label": "Contribuinte", "value": "CONTRIBUTOR"},
+                    {"label": "Contribuinte isento", "value": "IMMUNE_CONTRIBUTOR"}
+                ]
+            }
+        },
+        {
+            "key": "customer.city_registration_number",
+            "name": { "pt_BR": "inscrição municipal", "en": "city registration number" },
+            "description": {
+                "pt_BR": "O numero de inscrição municipal do cliente",
+                "en": "The city registration number number of the customer"
+            },
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "string",
+            "data_type": "string",
+            "max": 20
+        },
+        {
+            "key": "customer.contacts.name",
+            "name": { "pt_BR": "nome do contato", "en": "contact name" },
+            "description": {
+                "pt_BR": "O nome do contato do cliente",
+                "en": "The customer's contact name"
+            },
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "string",
+            "data_type": "string",
+            "max": 40
+        },
+        {
+            "key": "customer.contacts.business_phone",
+            "name": { "pt_BR": "telefone comercial do contato", "en": "contact business phone" },
+            "description": {
+                "pt_BR": "O telefone comercial do contato do cliente",
+                "en": "The customer's contact business phone"
+            },
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "string",
+            "data_type": "string",
+            "max": 20
+        },
+        {
+            "key": "customer.contacts.email",
+            "name": { "pt_BR": "email do contato", "en": "contact email" },
+            "description": {
+                "pt_BR": "O email do contato do cliente",
+                "en": "The customer's contact email"
+            },
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "string",
+            "data_type": "string",
+            "max": 100
+        },
+        {
+            "key": "customer.contacts.job_title",
+            "name": { "pt_BR": "cargo do contato", "en": "contact job title" },
+            "description": {
+                "pt_BR": "O cargo do contato do cliente",
+                "en": "The customer's contact job title"
+            },
+            "required": false,
+            "visible": true,
+            "advanced": false,
+            "field_type": "string",
+            "data_type": "string",
+            "max": 40
+        }
+    ]
+  },
+  "request": {
+    "method_name": "/customers",
+    "json_api": true,
+    "error_fields" : ["message"]
+  }
+}
