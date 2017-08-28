@@ -239,16 +239,6 @@
                     "params": [{"field": "name", "value": "{product.name}", "type" : "string"}],
                     "append_fields": [{"field": "sale.products.product.id", "value":"{product.id}", "type":"string"}]
                 }
-            },
-            {
-                "name" : "Find Service by Name",
-                "request": {
-                    "verb" : "get",
-                    "method_name": "/services",
-                    "json_api": true,
-                    "params": [{"field": "name", "value": "{service.name}", "type" : "string"}],
-                    "append_fields": [{"field": "sale.services.service.id", "value":"{service.id}", "type":"string"}]
-                }
             }]
         }
     }
