@@ -210,32 +210,32 @@
         "error_fields" : ["message"],
         "pre_hooks":{
             "hooks": [{
-                "name": "Get Customer by Id",
+                "name": "Find Customer by document",
                 "request": {
                     "verb": "get",
                     "method_name": "/customers",
                     "json_api": true,
-                    "params": [{"field": "id", "value": "{customer.id}", "type" : "string"}],
+                    "params": [{"field": "document", "value": "{customer.document}", "type" : "string"}],
                     "append_fields": [{"field": "contract.negotiator.id","value": "{customer.id}","type": "string"}]
                 }
             },
             {
-                "name" : "Get Product by Id",
+                "name" : "Find Product by Name",
                 "request": {
                     "verb" : "get",
                     "method_name": "/products",
                     "json_api": true,
-                    "params": [{"field": "id", "value": "{product.id}", "type" : "string"}],
+                    "params": [{"field": "name", "value": "{product.name}", "type" : "string"}],
                     "append_fields": [{"field": "contract.products.product.id", "value":"{product.id}", "type":"string"}]
                 }
             },
             {
-                "name" : "Get Service by Id",
+                "name" : "Find Service by Name",
                 "request": {
                     "verb" : "get",
                     "method_name": "/services",
                     "json_api": true,
-                    "params": [{"field": "id", "value": "{service.id}", "type" : "string"}],
+                    "params": [{"field": "name", "value": "{service.name}", "type" : "string"}],
                     "append_fields": [{"field": "contract.services.service.id", "value":"{service.id}", "type":"string"}]
                 }
             }]
