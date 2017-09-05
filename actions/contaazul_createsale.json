@@ -86,7 +86,7 @@
             }
         },
         {
-            "key": "sale.negotiator.id",
+            "key": "sale.customer_id",
             "name": { "pt_BR": "id do negociador", "en": "negotiatior id" },
             "description": {"pt_BR": "O id cliente da venda","en": "The customer id related to the sale"},
             "required": false,
@@ -97,7 +97,7 @@
            
         },
         {
-            "key": "sale.products.product.id",
+            "key": "sale.products.product_id",
             "name": { "pt_BR": "id do produto da venda", "en": "sale product id" },
             "description": {"pt_BR": "O id de um produto usado como item da venda","en": "The id of a product used as item in the sale"},
             "required": false,
@@ -128,7 +128,7 @@
             "max" : 100
         },
         {
-            "key": "sale.services.service.id",
+            "key": "sale.services.service_id",
             "name": { "pt_BR": "id do serviço da venda", "en": "sale service id" },
             "description": {"pt_BR": "O id de um serviço usado como item da venda","en": "The id of a service used as item in the sale"},
             "required": false,
@@ -227,7 +227,7 @@
                     "method_name": "/customers",
                     "json_api": true,
                     "params": [{"field": "document", "value": "{customer.document}", "type" : "string"}],
-                    "append_fields": [{"field": "sale.negotiator.id","value": "{customer.id}","type": "string"}]
+                    "append_fields": [{"field": "sale.customer_id","value": "{customer.id}","type": "string"}]
                 }
             },
             {
@@ -237,7 +237,7 @@
                     "method_name": "/products",
                     "json_api": true,
                     "params": [{"field": "name", "value": "{product.name}", "type" : "string"}],
-                    "append_fields": [{"field": "sale.products.product.id", "value":"{product.id}", "type":"string"}]
+                    "append_fields": [{"field": "sale.products.product_id", "value":"{product.id}", "type":"string"}]
                 }
             }]
         }
