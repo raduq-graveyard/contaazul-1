@@ -76,7 +76,7 @@
             }
         },
         {
-            "key": "contract.negotiator.id",
+            "key": "contract.customer_id",
             "name": { "pt_BR": "id do negociador", "en": "negotiatior id" },
             "description": {"pt_BR": "O id cliente do contrato","en": "The customer id related to the contract"},
             "required": false,
@@ -87,7 +87,7 @@
            
         },
         {
-            "key": "contract.products.product.id",
+            "key": "contract.products.product_id",
             "name": { "pt_BR": "id do produto do contrato", "en": "contract product id" },
             "description": {"pt_BR": "O id de um produto usado como item do contrato","en": "The id of a product used as item in the contract"},
             "required": false,
@@ -118,7 +118,7 @@
             "max" : 100
         },
         {
-            "key": "contract.services.service.id",
+            "key": "contract.services.service_id",
             "name": { "pt_BR": "id do serviço do contrato", "en": "contract service id" },
             "description": {"pt_BR": "O id de um serviço usado como item do contrato","en": "The id of a service used as item in the contract"},
             "required": false,
@@ -216,7 +216,7 @@
                     "method_name": "/customers",
                     "json_api": true,
                     "params": [{"field": "document", "value": "{customer.document}", "type" : "string"}],
-                    "append_fields": [{"field": "contract.negotiator.id","value": "{customer.id}","type": "string"}]
+                    "append_fields": [{"field": "contract.customer_id","value": "{customer.id}","type": "string"}]
                 }
             },
             {
@@ -226,7 +226,7 @@
                     "method_name": "/products",
                     "json_api": true,
                     "params": [{"field": "name", "value": "{product.name}", "type" : "string"}],
-                    "append_fields": [{"field": "contract.products.product.id", "value":"{product.id}", "type":"string"}]
+                    "append_fields": [{"field": "contract.products.product_id", "value":"{product.id}", "type":"string"}]
                 }
             }]
         }
